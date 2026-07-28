@@ -40,6 +40,14 @@ pipeline {
                 }
             }
         }
+        stage("kubernet deploy") {
+            steps {
+                sh '''
+                    kubectl set image deployment/flask-app flask-app=$IMAGE -n devops
+                    kubectl rollout status deployment/flask-app -n devops
+                '''
+            }
+        }
     }
 
     post {
