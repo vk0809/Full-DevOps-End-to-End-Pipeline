@@ -5,6 +5,7 @@ pipeline {
     environment {
         DOCKER_IMAGE = "vk0908/flask-app"
         IMAGE_TAG = "${BUILD_NUMBER}"
+	KUBECONFIG = "/var/lib/jenkins/.kube/config"
     }
 
     stages {
