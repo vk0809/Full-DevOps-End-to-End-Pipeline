@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_IMAGE = "vk0809/flask-app"
+        DOCKER_IMAGE = "vk0908/flask-app"
         IMAGE_TAG = "${BUILD_NUMBER}"
     }
 
